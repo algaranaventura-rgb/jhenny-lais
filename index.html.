@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Jhenny Lais | Moda Feminina</title>
+  <meta name="description" content="Compre a moda feminina Jhenny Lais na Shopee e no TikTok Shop. Aceitamos Pix e cartão.">
+  <meta name="theme-color" content="#2a0808">
+  <link rel="icon" href="logo.jpg">
+
+  <meta property="og:title" content="Jhenny Lais | Moda Feminina">
+  <meta property="og:description" content="Compre direto na Shopee ou no TikTok Shop. Aceitamos Pix e cartão.">
+  <meta property="og:image" content="https://algaranaventura-rgb.github.io/jhenny-lais/logo.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+
+  <script>document.documentElement.classList.add('js');</script>
+
+  <style>
+    :root {
+      --vinho-fundo: #2a0808;
+      --vinho: #4a0f0f;
+      --dourado: #d9b27c;
+      --dourado-claro: #ecd3a8;
+      --rose: #b9776b;
+      --bege: #f0e2d2;
+      --texto-escuro: #3a0d0d;
+      --fonte-titulo: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --fonte-corpo: "Jost", "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+
+    html { min-height: 100%; }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      min-height: 100svh;
+      font-family: var(--fonte-corpo);
+      color: var(--bege);
+      background:
+        radial-gradient(ellipse at 50% 30%, #5a1414 0%, transparent 65%),
+        var(--vinho-fundo);
+      background-attachment: fixed;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .so-leitor {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .palco {
+      width: 100%;
+      max-width: 440px;
+      min-height: 100vh;
+      min-height: 100svh;
+      margin: 0 auto;
+      padding: calc(env(safe-area-inset-top, 0px) + 32px) 20px calc(env(safe-area-inset-bottom, 0px) + 32px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* LOGO: começa grande no centro da tela e depois sobe e diminui */
+    .logo {
+      --tam: min(64vw, 250px);
+      width: var(--tam);
+      height: var(--tam);
+      flex: none;
+      border-radius: 50%;
+      overflow: hidden;
+      background: var(--vinho);
+      box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45);
+      transition: width 0.9s ease, height 0.9s ease;
+      animation:
+        entrada 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both,
+        brilho 2.6s ease-out 0.5s;
+    }
+    .logo img {
+      display: block;
+      width: 118%;
+      max-width: none;
+      margin: -9% 0 0 -9%;
+    }
+    .aberto .logo { --tam: 150px; }
+
+    @keyframes entrada {
+      from { opacity: 0; transform: scale(0.86); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    @keyframes brilho {
+      0%   { box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 rgba(217, 178, 124, 0); }
+      45%  { box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 70px rgba(217, 178, 124, 0.5); }
+      100% { box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 rgba(217, 178, 124, 0); }
+    }
+
+    /* AVISO DE PAGAMENTO */
+    .pagamento {
+      margin-top: 28px;
+      text-align: center;
+      animation: aparece 0.9s ease 0.9s both;
+    }
+    .pagamento p {
+      font-family: var(--fonte-titulo);
+      font-weight: 500;
+      font-size: 1.45rem;
+      color: var(--dourado-claro);
+    }
+    .formas {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 12px;
+      list-style: none;
+      padding: 0;
+    }
+    .formas li {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px 7px 12px;
+      border: 1.5px solid var(--dourado);
+      border-radius: 999px;
+      font-size: 0.95rem;
+      color: var(--bege);
+    }
+    .formas svg { width: 18px; height: 18px; fill: var(--dourado); }
+
+    @keyframes aparece {
+      from { opacity: 0; transform: translateY(8px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* BOTÕES: aparecem depois da entrada */
+    .conteudo {
+      width: 100%;
+      display: grid;
+      grid-template-rows: 1fr;
+      transition: grid-template-rows 0.9s ease, opacity 0.9s ease;
+    }
+    .conteudo-interno { min-height: 0; overflow: hidden; }
+    .js .conteudo { grid-template-rows: 0fr; opacity: 0; }
+    .js .conteudo-interno { visibility: hidden; }
+    .js .aberto .conteudo { grid-template-rows: 1fr; opacity: 1; }
+    .js .aberto .conteudo-interno { visibility: visible; }
+
+    .links {
+      list-style: none;
+      padding: 0;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .links a {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-height: 68px;
+      padding: 12px 20px 12px 14px;
+      border-radius: 14px;
+      background: var(--bege);
+      color: var(--texto-escuro);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.05rem;
+      border: 1.5px solid transparent;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .links a:hover { border-color: var(--dourado); transform: translateY(-2px); }
+    .links .icone {
+      flex: none;
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--vinho);
+      color: var(--dourado-claro);
+    }
+    .links .icone svg { width: 22px; height: 22px; fill: currentColor; }
+
+    .atalhos {
+      list-style: none;
+      padding: 0;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .atalhos a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 6px;
+      border: 1.5px solid var(--dourado);
+      border-radius: 14px;
+      color: var(--dourado-claro);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .atalhos a:hover { background: var(--dourado); color: var(--vinho-fundo); }
+    .atalhos svg { width: 24px; height: 24px; fill: currentColor; }
+
+    a:focus-visible {
+      outline: 3px solid var(--dourado-claro);
+      outline-offset: 3px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="palco" id="palco">
+    <h1 class="so-leitor">Jhenny Lais Moda Feminina</h1>
+
+    <div class="logo">
+      <img src="logo.jpg" alt="Logo Jhenny Lais Moda Feminina">
+    </div>
+
+    <div class="pagamento">
+      <p>Aceitamos Pix e cartão</p>
+      <ul class="formas">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 3l9 9-9 9-9-9 9-9Zm0 5-4 4 4 4 4-4-4-4Z"/></svg>
+          Pix
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M3 6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6Zm2 2v2h14V8H5Zm0 4v6h14v-6H5Z"/></svg>
+          Cartão
+        </li>
+      </ul>
+    </div>
+
+    <div class="conteudo">
+      <div class="conteudo-interno">
+
+        <!-- BOTÕES DE COMPRA: troque os links abaixo -->
+        <ul class="links">
+          <li>
+            <a href="https://shopee.com.br/SEU_USUARIO" target="_blank" rel="noopener">
+              <span class="icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7V6a5 5 0 0 1 10 0v1h2.6a1 1 0 0 1 1 1.1l-1.2 12A2 2 0 0 1 17.4 22H6.6a2 2 0 0 1-2-1.9l-1.2-12A1 1 0 0 1 4.4 7H7Zm2 0h6V6a3 3 0 0 0-6 0v1Zm-4.5 2 1.1 11h12.8l1.1-11H4.5Z"/></svg>
+              </span>
+              <span>Comprar na Shopee</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@SEU_TIKTOK_SHOP" target="_blank" rel="noopener">
+              <span class="icone">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.1a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.1 6.1 0 1 0 5.2 6.1V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.8Z"/></svg>
+              </span>
+              <span>Comprar no TikTok Shop</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- ATALHOS: troque os links abaixo -->
+        <ul class="atalhos">
+          <li>
+            <a href="https://instagram.com/SEU_INSTAGRAM" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6Zm9.65 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>
+              Instagram
+            </a>
+          </li>
+          <li>
+            <a href="https://tiktok.com/@SEU_TIKTOK" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.1a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.1 6.1 0 1 0 5.2 6.1V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.8Z"/></svg>
+              TikTok
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/55DDDNUMERO" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 2a8 8 0 1 1-4.2 14.8l-.3-.2-2.9.8.8-2.8-.2-.3A8 8 0 0 1 12 4Zm-3 3.3c-.2 0-.5.1-.7.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4 1 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.4l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.2-1.4-.8-.7-1.4-1.6-1.5-1.9-.2-.3 0-.4.1-.6l.4-.5c.1-.1.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-2c-.2-.5-.4-.5-.6-.5H9Z"/></svg>
+              WhatsApp
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </main>
+
+  <script>
+    (function () {
+      var palco = document.getElementById('palco');
+      var aberto = false;
+      function abrir() {
+        if (aberto) return;
+        aberto = true;
+        palco.classList.add('aberto');
+      }
+      var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (semMovimento) {
+        abrir();
+      } else {
+        setTimeout(abrir, 3000);
+        document.addEventListener('pointerdown', abrir, { once: true });
+        document.addEventListener('keydown', abrir, { once: true });
+      }
+    })();
+  </script>
+</body>
+</html>
