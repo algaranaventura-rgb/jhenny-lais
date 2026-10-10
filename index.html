@@ -85,18 +85,21 @@
         entrada 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both,
         brilho 2.6s ease-out 0.5s;
     }
+
     .logo img {
       display: block;
       width: 118%;
       max-width: none;
       margin: -9% 0 0 -9%;
     }
+
     .aberto .logo { --tam: 150px; }
 
     @keyframes entrada {
       from { opacity: 0; transform: scale(0.86); }
       to   { opacity: 1; transform: scale(1); }
     }
+
     @keyframes brilho {
       0%   { box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 0 rgba(217, 178, 124, 0); }
       45%  { box-shadow: 0 0 0 3px var(--dourado), 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 70px rgba(217, 178, 124, 0.5); }
@@ -109,12 +112,14 @@
       text-align: center;
       animation: aparece 0.9s ease 0.9s both;
     }
+
     .pagamento p {
       font-family: var(--fonte-titulo);
       font-weight: 500;
       font-size: 1.45rem;
       color: var(--dourado-claro);
     }
+
     .formas {
       display: flex;
       justify-content: center;
@@ -123,6 +128,7 @@
       list-style: none;
       padding: 0;
     }
+
     .formas li {
       display: inline-flex;
       align-items: center;
@@ -133,6 +139,7 @@
       font-size: 0.95rem;
       color: var(--bege);
     }
+
     .formas svg { width: 18px; height: 18px; fill: var(--dourado); }
 
     @keyframes aparece {
@@ -147,7 +154,9 @@
       grid-template-rows: 1fr;
       transition: grid-template-rows 0.9s ease, opacity 0.9s ease;
     }
+
     .conteudo-interno { min-height: 0; overflow: hidden; }
+
     .js .conteudo { grid-template-rows: 0fr; opacity: 0; }
     .js .conteudo-interno { visibility: hidden; }
     .js .aberto .conteudo { grid-template-rows: 1fr; opacity: 1; }
@@ -161,6 +170,7 @@
       flex-direction: column;
       gap: 14px;
     }
+
     .links a {
       display: flex;
       align-items: center;
@@ -176,7 +186,9 @@
       border: 1.5px solid transparent;
       transition: border-color 0.2s, transform 0.2s;
     }
+
     .links a:hover { border-color: var(--dourado); transform: translateY(-2px); }
+
     .links .icone {
       flex: none;
       display: grid;
@@ -187,6 +199,7 @@
       background: var(--vinho);
       color: var(--dourado-claro);
     }
+
     .links .icone svg { width: 22px; height: 22px; fill: currentColor; }
 
     /* Os atalhos dividem a linha igualmente, com 2 ou 3 botões */
@@ -197,7 +210,9 @@
       display: flex;
       gap: 10px;
     }
+
     .atalhos li { flex: 1; }
+
     .atalhos a {
       display: flex;
       flex-direction: column;
@@ -211,6 +226,7 @@
       font-size: 0.9rem;
       transition: background 0.2s, color 0.2s;
     }
+
     .atalhos a:hover { background: var(--dourado); color: var(--vinho-fundo); }
     .atalhos svg { width: 24px; height: 24px; fill: currentColor; }
 
@@ -227,6 +243,7 @@
     }
   </style>
 </head>
+
 <body>
   <main class="palco" id="palco">
     <h1 class="so-leitor">Jhenny Lais Moda Feminina</h1>
@@ -271,13 +288,29 @@
               Instagram
             </a>
           </li>
+
           <li>
             <a href="https://www.tiktok.com/@moda_jhennylais" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 2h-3.2v13.1a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.1 6.1 0 1 0 5.2 6.1V8.6a7.6 7.6 0 0 0 4.4 1.4V6.8a4.4 4.4 0 0 1-4.4-4.8Z"/></svg>
               TikTok
             </a>
           </li>
-          <!-- WhatsApp: ainda sem número, por isso fica escondido. -->
+
+          <!-- WhatsApp da Mirtha: Vendedora 2 -->
+          <li>
+            <a href="https://wa.me/5511998564042" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h.1C18.7 23.8 24 18.5 24 12a11.8 11.8 0 0 0-3.5-8.5ZM12.1 21.8h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4s.3-1.3.2-1.4-.3-.2-.6-.4Z"/></svg>
+              Mirtha · Vendedora 2
+            </a>
+          </li>
+
+          <!-- WhatsApp do Elias: Vendedor 1 -->
+          <li>
+            <a href="https://wa.me/5511998470234" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.6 6L0 24l6.4-1.7a11.8 11.8 0 0 0 5.7 1.5h.1C18.7 23.8 24 18.5 24 12a11.8 11.8 0 0 0-3.5-8.5ZM12.1 21.8h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.8 1 1-3.7-.2-.4a9.8 9.8 0 1 1 8.5 4.7Zm5.4-7.3c-.3-.2-1.8-.9-2.1-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.7.1a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.4.3-.6s0-.4 0-.6-.7-1.7-1-2.3c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.9.4s-1.2 1.2-1.2 2.8 1.2 3.2 1.4 3.4 2.4 3.7 5.8 5.1c.8.3 1.4.5 1.9.6.8.2 1.5.2 2 .1.6-.1 1.8-.7 2.1-1.4s.3-1.3.2-1.4-.3-.2-.6-.4Z"/></svg>
+              Elias · Vendedor 1
+            </a>
+          </li>
         </ul>
 
       </div>
@@ -288,12 +321,15 @@
     (function () {
       var palco = document.getElementById('palco');
       var aberto = false;
+
       function abrir() {
         if (aberto) return;
         aberto = true;
         palco.classList.add('aberto');
       }
+
       var semMovimento = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
       if (semMovimento) {
         abrir();
       } else {
